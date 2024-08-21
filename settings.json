@@ -40,20 +40,26 @@
     "coloring": "fixed"
   },
   "autosave": "off",
-  "format_on_save": "on",
-  "formatter": "language_server",
   "unnecessary_code_fade": 0.8,
   "ensure_final_newline_on_save": true,
   "languages": {
     "HEEX": {
-      "language_servers": [
-        "next-ls"
-      ]
+      "language_servers": ["next-ls"],
+      "format_on_save": {
+        "external": {
+          "command": "mix",
+          "arguments": ["format", "--stdin-filename", "{buffer_path}", "-"]
+        }
+      }
     },
     "Elixir": {
-      "language_servers": [
-        "next-ls"
-      ]
+      "language_servers": ["next-ls"],
+      "format_on_save": {
+        "external": {
+          "command": "mix",
+          "arguments": ["format", "--stdin-filename", "{buffer_path}", "-"]
+        }
+      }
     }
   },
   "lsp": {
