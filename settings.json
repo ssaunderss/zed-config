@@ -1,0 +1,68 @@
+{
+  "assistant": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-3-5-sonnet-20240620"
+    },
+    "version": "2"
+  },
+  "active_pane_magnification": 1.5,
+  "show_inline_completions": true,
+  "terminal": {
+    "dock": "bottom",
+    "blinking": "on"
+  },
+  "theme": "Catppuccin Macchiato",
+  "tab_size": 2,
+  "preferred_line_length": 80,
+  // "buffer_font_family": "DankMono Nerd Font", // size 20
+  // "buffer_font_family": "Monocraft", // size 18
+  "buffer_font_family": "0xProto", // size 19
+  "buffer_font_size": 19,
+  "ui_font_family": "0xProto",
+  "ui_font_size": 16,
+  "toolbar": {
+    "quick_actions": false
+  },
+  "soft_wrap": "editor_width",
+  "tabs": {
+    "file_icons": true,
+    "git_status": true
+  },
+  "project_panel": {
+    "git_status": true
+  },
+  "git": {
+    "git_gutter": "tracked_files"
+  },
+  "always_treat_brackets_as_autoclosed": true,
+  "indent_guides": {
+    "coloring": "fixed"
+  },
+  "autosave": "off",
+  "format_on_save": "on",
+  "formatter": "language_server",
+  "unnecessary_code_fade": 0.8,
+  "ensure_final_newline_on_save": true,
+  "languages": {
+    "HEEX": {
+      "language_servers": [
+        "next-ls"
+      ]
+    },
+    "Elixir": {
+      "language_servers": [
+        "next-ls"
+      ]
+    }
+  },
+  "lsp": {
+    "next-ls": {
+      "experimental": {
+        "completions": {
+          "enable": true
+        }
+      }
+    }
+  }
+}
