@@ -2,15 +2,18 @@
   "assistant": {
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-3-5-sonnet-20240620"
+      "model": "claude-3-5-sonnet-latest"
     },
     "version": "2"
   },
-  "active_pane_magnification": 1.5,
+  "active_pane_modifiers": {
+    "magnification": 1.5
+  },
   "show_inline_completions": true,
   "terminal": {
     "dock": "bottom",
-    "blinking": "on"
+    "blinking": "on",
+    "cursor_shape": "block"
   },
   "theme": "Catppuccin Frappé",
   "tab_size": 2,
@@ -43,8 +46,9 @@
   "unnecessary_code_fade": 0.8,
   "ensure_final_newline_on_save": true,
   "languages": {
+    "JavaScript": { "format_on_save": "off" },
     "HEEX": {
-      "language_servers": ["next-ls"],
+      "language_servers": ["lexical"],
       "format_on_save": {
         "external": {
           "command": "mix",
@@ -53,7 +57,7 @@
       }
     },
     "Elixir": {
-      "language_servers": ["next-ls"],
+      "language_servers": ["lexical"],
       "format_on_save": {
         "external": {
           "command": "mix",
