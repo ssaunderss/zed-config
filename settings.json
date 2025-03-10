@@ -1,15 +1,20 @@
 {
+  "show_edit_predictions": true,
+  "features": {
+    "edit_prediction_provider": "copilot"
+  },
+  "icon_theme": "Catppuccin Macchiato",
   "assistant": {
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-3-5-sonnet-latest"
+      "model": "claude-3-7-sonnet-latest"
     },
     "version": "2"
   },
   "active_pane_modifiers": {
     "magnification": 1.5
   },
-  "show_inline_completions": true,
+
   "terminal": {
     "dock": "bottom",
     "blinking": "on",
@@ -48,7 +53,7 @@
   "languages": {
     "JavaScript": { "format_on_save": "off" },
     "HEEX": {
-      "language_servers": ["lexical"],
+      "language_servers": ["elixir-ls"],
       "format_on_save": {
         "external": {
           "command": "mix",
@@ -57,7 +62,8 @@
       }
     },
     "Elixir": {
-      "language_servers": ["lexical"],
+      "show_edit_predictions": false,
+      "language_servers": ["elixir-ls"],
       "format_on_save": {
         "external": {
           "command": "mix",
