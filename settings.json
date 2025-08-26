@@ -9,14 +9,9 @@
     "default_profile": "ask",
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-3-7-sonnet"
-    },
-    "version": "2"
+      "model": "claude-sonnet-4"
+    }
   },
-  "active_pane_modifiers": {
-    "magnification": 1.5
-  },
-
   "terminal": {
     "dock": "bottom",
     "blinking": "on",
@@ -29,6 +24,7 @@
   "buffer_font_family": "0xProto", // size 19
   "buffer_font_size": 19,
   "ui_font_family": "0xProto",
+  // "ui_font_family": "Monocraft",
   "ui_font_size": 16,
   "toolbar": {
     "quick_actions": false
@@ -53,33 +49,11 @@
   "ensure_final_newline_on_save": true,
   "languages": {
     "JavaScript": { "format_on_save": "off" },
-    "HEEX": {
-      "language_servers": ["elixir-ls"],
-      "format_on_save": {
-        "external": {
-          "command": "mix",
-          "arguments": ["format", "--stdin-filename", "{buffer_path}", "-"]
-        }
-      }
-    },
+    "HEEX": { "language_servers": ["elixir-ls", "tailwind"] },
     "Elixir": {
       "show_edit_predictions": true,
-      "language_servers": ["elixir-ls"],
-      "format_on_save": {
-        "external": {
-          "command": "mix",
-          "arguments": ["format", "--stdin-filename", "{buffer_path}", "-"]
-        }
-      }
+      "language_servers": ["elixir-ls"]
     }
   },
-  "lsp": {
-    "next-ls": {
-      "experimental": {
-        "completions": {
-          "enable": true
-        }
-      }
-    }
-  }
+  "lsp": {}
 }
