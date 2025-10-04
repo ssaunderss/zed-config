@@ -49,11 +49,26 @@
   "ensure_final_newline_on_save": true,
   "languages": {
     "JavaScript": { "format_on_save": "off" },
-    "HEEX": { "language_servers": ["elixir-ls", "tailwind"] },
+    "HEEX": {
+      "language_servers": ["expert", "tailwind"],
+      "formatter": {
+        "external": {
+          "command": "mix",
+          "arguments": ["format", "--stdin-filename", "{buffer_path}", "-"]
+        }
+      },
+      "format_on_save": "on"
+    },
     "Elixir": {
+      "formatter": {
+        "external": {
+          "command": "mix",
+          "arguments": ["format", "--stdin-filename", "{buffer_path}", "-"]
+        }
+      },
+      "format_on_save": "on",
       "show_edit_predictions": true,
-      "language_servers": ["elixir-ls"]
+      "language_servers": ["expert"]
     }
-  },
-  "lsp": {}
+  }
 }
